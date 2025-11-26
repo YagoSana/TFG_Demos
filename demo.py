@@ -63,19 +63,50 @@ print("Aristas del grafo:")
 print(G.edges())
 
 # Aplicar algoritmo PageRank
-pagerank = nx.pagerank(G, alpha=0.85) #factor de amortiguamiento típico es 0.85
+pagerank1 = nx.pagerank(G, alpha=0.85) #factor de amortiguamiento típico es 0.85
+# Calcular PageRank con parámetros de importancia a nodos iniciales
+# Nstart es un diccionario con valores iniciales para cada nodo
+
+# Identificar nodos "hoja" (donde empieza el flujo del grafo invertido)
+# Los nodos hoja son los que tienen grado 0 de entrada (nadie les apunta) <- REVISAR
+nodos_hoja = [n for n in G.nodes() if G.in_degree(n) == 0]
+
+# Asignar un peso inicial igual para todos los nodos hoja
+diccionario_pesos = {nodo: 0 for nodo in G.nodes()} # Inicializar todos a 0
+for nodo in nodos_hoja:
+    diccionario_pesos[nodo] = 100 # Valor alto inventado 
+
+# Probar con nstart y personalization para mostrar que nstart solo afecta la inicialización y que con muchas iteraciones (pagerank hace unas cuantas) se diluye el efecto
+pagerank2 = nx.pagerank(G, alpha=0.85, nstart=diccionario_pesos)
+pagerank3 = nx.pagerank(G, alpha=0.85, personalization=diccionario_pesos)
 print("PageRank de los nodos:")
 
 # Ordenar los nodos por su valor de PageRank en forma de árbol descendente
 # Como suponemos conexo el grafo completo y representa un arbol de directorio, solo debe haber una raiz
 nodos_raiz = [nodo for nodo in G.nodes() if G.out_degree(nodo) == 0]
 
+print("Imprimir arbol normal:")
 if not nodos_raiz:
     print("Advertencia: No se encontró un nodo raíz claro (out_degree == 0)")
 else:
     # Solo hay una raiz pero por si hubiera casos excepcionales o errores, lo ponemos en un foreach que solo itera 1 vez
     for raiz in nodos_raiz:
-        rank_raiz = pagerank.get(raiz, 0)
+        rank_raiz = pagerank1.get(raiz, 0)
         print(f"[{raiz}] (Rank: {rank_raiz:.5f})") 
         # Llamar a la función recursiva para sus hijos
-        imprimir_arbol_recursivo(G, raiz, pagerank, prefijo="", es_ultimo=True)
+        imprimir_arbol_recursivo(G, raiz, pagerank1, prefijo="", es_ultimo=True)
+    print() #\n
+    print("Imprimir arbol con nstart:")
+    for raiz in nodos_raiz:
+        rank_raiz = pagerank2.get(raiz, 0)
+        print(f"[{raiz}] (Rank: {rank_raiz:.5f})") 
+        # Llamar a la función recursiva para sus hijos
+        imprimir_arbol_recursivo(G, raiz, pagerank2, prefijo="", es_ultimo=True)
+    # Añadir una línea en blanco para separar la salida en terminal
+    print()
+    print("Imprimir arbol con personalization:")
+    for raiz in nodos_raiz:
+        rank_raiz = pagerank3.get(raiz, 0)
+        print(f"[{raiz}] (Rank: {rank_raiz:.5f})") 
+        # Llamar a la función recursiva para sus hijos
+        imprimir_arbol_recursivo(G, raiz, pagerank3, prefijo="", es_ultimo=True)
