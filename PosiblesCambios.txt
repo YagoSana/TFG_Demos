@@ -1,0 +1,5 @@
+1. Separar lectura, procesado y visualización(modular para poder editar mejor)
+2. Validar estructura antes de aplicar PageRank(comprobar que lo que nos pasan son arboles y no otro tipo de grafos)
+3. Elegir automáticamente la raíz correcta(asegurarnos de que solo hay una raiza, va combinado con la 2)
+4. Tipar datos como strings, no ints(eso lo vemos cuando nos den un dataset)
+5. Mejor gestión de errores y mensajes(mensajes de erro mas profesionales con import logging)
