@@ -3,3 +3,9 @@
 3. Elegir automáticamente la raíz correcta(asegurarnos de que solo hay una raiza, va combinado con la 2)
 4. Tipar datos como strings, no ints(eso lo vemos cuando nos den un dataset)
 5. Mejor gestión de errores y mensajes(mensajes de erro mas profesionales con import logging)
+
+
+# Alternativas de Jose Luis y futuras implementaciones:
+    - Propagacion en árbol, aplicar un pagerank sobre las relaciones no gerárquicas y luego otro normal.
+    - Que sea grafo de padres a hijos e hijos a padres.
+    - Investigar si afecta el peso de las relaciones, si se puede ponderar los arcos de ralación entre nodos. 
