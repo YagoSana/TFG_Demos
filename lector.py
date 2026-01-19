@@ -1,5 +1,8 @@
 import networkx as nx
 import sys
+import logging
+
+logging.basicConfig(level=logging.ERROR)
 
 def leer_entrada(nombre_archivo):
     """Lee un archivo de texto y devuelve un grafo de NetworkX con aristas invertidas."""
@@ -20,5 +23,6 @@ def leer_entrada(nombre_archivo):
                         G.add_edge(fin, ini)
         return G
     except FileNotFoundError:
-        print(f"ERROR: No se encontró el archivo '{nombre_archivo}'.")
+        #print(f"ERROR: No se encontró el archivo '{nombre_archivo}'.")
+        logging.error("No se pudo abrir el archivo. Verifica que el nombre y la ruta sean correctos.")
         sys.exit(1)
