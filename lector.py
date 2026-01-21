@@ -6,6 +6,7 @@ logging.basicConfig(level=logging.ERROR)
 
 def leer_entrada(nombre_archivo):
     """Lee un archivo de texto y devuelve un grafo de NetworkX con aristas invertidas."""
+    """Supnemos que el archivo contiene una lista de las aristas del arbol, las relaciones de referencias las asignamos posteriormente para así comprobar la validez del grafo primero."""
     G = nx.DiGraph()
     try:
         with open(nombre_archivo, 'r') as f:

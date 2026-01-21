@@ -6,21 +6,33 @@ from validador import esGrafoValido
 
 import logging
 
+def asignar_relaciones(G):
+    """Crear relaciones de referencias entre <documentos>. Eventualmente, estas relaciones vendrán en un archivo externo."""
+    G.add_edge(15, 18)
+    G.add_edge(19, 17)
+
 # LEER ENTRADA
+print(" - Leyendo el archivo de entrada - ")
 G = leer_entrada("entrada.txt")
 
 # VALIDAR ESTRUCTURA
+print(" - Validando la estructura del grafo - ")
+valido = esGrafoValido(G)
+if not valido:
+    logging.error("La estructura del grafo no es válida. Terminando el programa.")
+    exit(1)
 
-#valido = esGrafoValido(G)
-#if not valido:
-#    logging.error("La estructura del grafo no es válida. Terminando el programa.")
-#    exit(1)
+# CREAR RELACIONES DE REFERENCIA ENTRE HOJAS
+print(" - Creando relaciones de referencia entre hojas - ")
+asignar_relaciones(G)
 
 # ASIGNACIÓN DE ETIQUETAS
 for n in G.nodes():
     G.nodes[n]["etiqueta"] = "importante" if n % 2 == 0 else "normal"
 
+
 # CÁLCULOS DE PAGERANK
+print(" - Calculando PageRank con diferentes configuraciones - ")
 
 # A) PageRank Normal
 pr_normal = nx.pagerank(G, alpha=0.85)
@@ -51,6 +63,7 @@ else:
     pr_pers_etiqueta = pr_normal
 
 # IMPRESIÓN DE RESULTADOS
+print(" - Imprimiendo resultados - ")
 imprime_grafo(G, pr_normal, "PAGE RANK NORMAL")
 imprime_grafo(G, pr_nstart, "PAGE RANK CON NSTART")
 imprime_grafo(G, pr_pers_hojas, "PERSONALIZATION SUAVIZADA (HOJAS)")
