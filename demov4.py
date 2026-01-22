@@ -249,7 +249,7 @@ for nodo in sorted(nodos_con_referencias):
 # ============================================================================
 
 print("\n" + "="*70)
-print("FASE 2: COMPARACIÓN DE LAS 3 VARIANTES PRINCIPALES")
+print("COMPARACIÓN DE LAS 3 VARIANTES PRINCIPALES")
 print("="*70)
 
 print("\n{:<10} {:<20} {:<20} {:<20} {:<20}".format(
