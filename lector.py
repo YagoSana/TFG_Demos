@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.ERROR)
 
-def leer_entrada(nombre_archivo):
+def leer_entrada(nombre_archivo, parentesco):
     """Lee un archivo de texto y devuelve un grafo de NetworkX con aristas invertidas."""
     """Supnemos que el archivo contiene una lista de las aristas del arbol, las relaciones de referencias las asignamos posteriormente para así comprobar la validez del grafo primero."""
     G = nx.DiGraph()
@@ -21,7 +21,10 @@ def leer_entrada(nombre_archivo):
                         ini = int(valores[0])
                         fin = int(valores[1])
                         # Aristas invertidas (hijo -> padre) según tu lógica original
-                        G.add_edge(fin, ini)
+                        if parentesco == 0:
+                            G.add_edge(fin, ini)
+                        else:
+                            G.add_edge(ini, fin)
         return G
     except FileNotFoundError:
         #print(f"ERROR: No se encontró el archivo '{nombre_archivo}'.")
