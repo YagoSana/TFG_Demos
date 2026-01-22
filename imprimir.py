@@ -1,4 +1,5 @@
 import networkx as nx
+import logging
 
 def _imprimir_arbol_recursivo(grafo, nodo_actual, pagerank_dict, prefijo="", es_ultimo=True):
     """Función interna recursiva para dar formato de árbol."""
@@ -26,7 +27,7 @@ def imprime_grafo(grafo, pagerank_dict, titulo="RESULTADOS"):
     nodos_raiz = [nodo for nodo in grafo.nodes() if grafo.out_degree(nodo) == 0]
     
     if not nodos_raiz:
-        print("No se detectaron nodos raíz (ciclo detectado o grafo vacío).")
+        logging.error("No se detectaron nodos raíz (ciclo detectado o grafo vacío).")
         return
 
     for raiz in nodos_raiz:
