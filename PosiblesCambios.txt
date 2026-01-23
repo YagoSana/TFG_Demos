@@ -1,11 +1,12 @@
-DONE 1. Separar lectura, procesado y visualización(modular para poder editar mejor)
-DONE 2. Validar estructura antes de aplicar PageRank(comprobar que lo que nos pasan son árboles y no otro tipo de grafos)
-3. Elegir automáticamente la raíz correcta(asegurarnos de que solo hay una raiz, va combinado con la 2)
-4. Tipar datos como strings, no ints(eso lo vemos cuando nos den un dataset)
-DONE 5. Mejor gestión de errores y mensajes(mensajes de erro mas profesionales con import logging)
+ORGANIZACION EN CARPETAS
 
+Modificar la entrada para que sea mas compleja y se acepten datos como "libros"
+    - Simular un arbol jerárquico de juguete para luego aplicar dataset
+    - Hacer pequeña UI para visualizarlo mejor
 
-# Alternativas de Jose Luis y futuras implementaciones:
-    - Propagacion en árbol, aplicar un pagerank sobre las relaciones no jerárquicas y luego otro normal.
-    - Que sea grafo de padres a hijos e hijos a padres.
-    - Investigar si afecta el peso de las relaciones, si se puede ponderar los arcos de ralación entre nodos. 
+Versiones:
+    - Solo jerarquías sin pesos a libros
+    - Solo jerarquías con pesos a libros
+    - Con referencias con pesos a libros
+    - 
+
