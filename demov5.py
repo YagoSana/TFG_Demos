@@ -1,6 +1,6 @@
 import networkx as nx
 from lector import leer_entrada
-from imprimir import imprimir_grafo
+from imprimir import imprimir_arbol_con_pesos, tabla_comparativa_final
 import logging
 
 # ============================================================================
@@ -108,76 +108,6 @@ def version3_con_referencias_y_pesos(G, referencias, peso_libro=2.0, peso_refere
     return pr
 
 
-# ============================================================================
-# IMPRIMIR RESULTADOS
-# ============================================================================
-
-def imprimir_arbol_con_pesos(G, pr, titulo):
-    """
-    Imprime el árbol con los valores de PageRank al lado de cada nodo
-    """
-    print(f"\n{'='*70}")
-    print(f"{titulo}")
-    print(f"{'='*70}\n")
-    
-    # Empezar por los nodos que tienen nivel 0 (raíz)
-    raices_reales = [n for n, attr in G.nodes(data=True) if attr.get('nivel') == 0]
-    
-    for raiz in sorted(raices_reales):
-        score = pr.get(raiz, 0)
-        print(f"[{raiz}] {score:.6f}")
-        _imprimir_recursivo_con_pesos(G, raiz, "", pr)
-
-
-def _imprimir_recursivo_con_pesos(G, nodo_actual, prefijo, pr):
-    """
-    Función recursiva para imprimir árbol con pesos
-    """
-    nivel_actual = G.nodes[nodo_actual].get('nivel', 0)
-    
-    # Filtramos vecinos que tengan un nivel mayor al actual
-    hijos = []
-    for vecino in G.neighbors(nodo_actual):
-        nivel_vecino = G.nodes[vecino].get('nivel', 0)
-        if nivel_vecino > nivel_actual:
-            hijos.append(vecino)
-    
-    hijos.sort()
-    num_hijos = len(hijos)
-    
-    for i, hijo in enumerate(hijos):
-        es_ultimo = (i == num_hijos - 1)
-        conector = "└── " if es_ultimo else "├── "
-        score = pr.get(hijo, 0)
-        
-        print(f"{prefijo}{conector}{hijo} {score:.6f}")
-        
-        nuevo_prefijo = prefijo + ("    " if es_ultimo else "│   ")
-        _imprimir_recursivo_con_pesos(G, hijo, nuevo_prefijo, pr)
-
-
-def tabla_comparativa_final(G, pr_v1, pr_v2, pr_v3):
-    """
-    Tabla comparativa única y completa de las tres versiones con análisis
-    """
-    print(f"\n{'='*90}")
-    print("TABLA COMPARATIVA FINAL - TODAS LAS VERSIONES")
-    print(f"{'='*90}")
-    
-    # Ordenar por V1 para mantener consistencia
-    nodos_ordenados = sorted(pr_v1.items(), key=lambda x: x[1], reverse=True)
-    
-    print(f"\n{'Nodo':<35} {'V1 (base)':<15} {'V2 (pesos)':<15} {'V3 (refs)':<15} {'ΔV2':<10} {'ΔV3':<10}")
-    print("-"*90)
-    
-    for nodo, score_v1 in nodos_ordenados:
-        score_v2 = pr_v2[nodo]
-        score_v3 = pr_v3[nodo]
-        diff_v2 = score_v2 - score_v1
-        diff_v3 = score_v3 - score_v1
-        
-        print(f"{nodo:<35} {score_v1:<15.6f} {score_v2:<15.6f} {score_v3:<15.6f} {diff_v2:+<10.4f} {diff_v3:+<10.4f}")
-    
    
 
 # ============================================================================
