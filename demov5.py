@@ -137,4 +137,4 @@ imprimir_arbol_con_pesos(G, pr_v3, "VERSIÓN 3: Con Referencias y Pesos (refs=3x
 # TABLA COMPARATIVA FINAL
 tabla_comparativa_final(G, pr_v1, pr_v2, pr_v3)
 
-exportar_html(G, pr_v1, pr_v2, pr_v3, "resultados_tfg.html")
+exportar_html(G, pr_v1, pr_v2, pr_v3, "main.html")
