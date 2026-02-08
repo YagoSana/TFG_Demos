@@ -4,9 +4,6 @@ from imprimir import imprimir_arbol_con_pesos, tabla_comparativa_final
 from generaHTML import exportar_html
 import logging
 
-# ============================================================================
-# VERSIÓN 1: Solo Jerarquías SIN Pesos
-# ============================================================================
 
 def version1_sin_pesos(G, alpha=0.85):
     """
@@ -28,23 +25,13 @@ def version1_sin_pesos(G, alpha=0.85):
     return pr
 
 
-# ============================================================================
-# VERSIÓN 2: Personalización basada en Likes de Libros
-# ============================================================================
-
-def version2_personalizacion_likes(G, likes_libros, referencias=None, alpha=0.85):
+def version4_personalizacion_likes(G, likes_libros, referencias=None, alpha=0.85):
     """
     PageRank personalizado donde:
-    - Cada libro tiene un número de likes
+    - Cada libro tiene un número de likes (rating)
     - El vector de personalización concentra importancia en los libros
     - Las categorías superiores heredan importancia de sus libros
     
-    Parámetros:
-        likes_libros: dict {nombre_libro: cantidad_likes}
-        referencias: lista opcional de tuplas (nodo1, nodo2)
-    
-    VENTAJA: Los libros populares hacen que sus categorías padre sean importantes.
-    Un género con muchos libros populares sube más que uno con pocos.
     """
     # Identificar nodos hoja (libros)
     niveles = [G.nodes[n].get('nivel', 0) for n in G.nodes()]
@@ -91,10 +78,6 @@ def version2_personalizacion_likes(G, likes_libros, referencias=None, alpha=0.85
     return pr
 
 
-# ============================================================================
-# VERSIÓN 3: Con Referencias Y Pesos
-# ============================================================================
-
 def version3_con_referencias_y_pesos(G, referencias, peso_libro=2.0, peso_referencia=3.0, alpha=0.85):
     """
     PageRank con:
@@ -138,21 +121,18 @@ def version3_con_referencias_y_pesos(G, referencias, peso_libro=2.0, peso_refere
 # PROGRAMA PRINCIPAL
 # ============================================================================
 
-# LEER ENTRADA
 G = leer_entrada("entrada.txt")
 
-# Referencias entre géneros relacionados
 referencias = [
     ("Historical mystery", "Detective mystery"),
     ("Mystery thriller", "Psychological thriller"),
 ]
 
 # DEFINIR LIKES POR LIBRO (simulando popularidad)
-# En tu caso real, estos valores vendrían de tu base de datos
 likes_libros = {
     # Historical fiction
     "Christian Historical Fiction": 100,
-    "Historical mystery": 500,  # POPULAR
+    "Historical mystery": 500,              # POPULAR
     "Biographical": 150,
     "Alternate history": 200,
     "Historical adventure": 180,
@@ -163,15 +143,15 @@ likes_libros = {
     "Hard boiled crime": 220,
     
     # Mystery
-    "Detective mystery": 450,  # POPULAR
+    "Detective mystery": 450,               # POPULAR
     "Cozy mystery": 400,
     "Murder mystery": 380,
     "Paranormal mystery": 150,
-    # "Historical mystery" ya está arriba
+    # "Historical mystery" ya tiene la popularidad
     
     # Thriller
-    "Mystery thriller": 600,  # MUY POPULAR
-    "Psychological thriller": 700,  # MUY POPULAR
+    "Mystery thriller": 600,                # MUY POPULAR
+    "Psychological thriller": 700,          # MUY POPULAR
     "Spy thriller": 350,
     "Legal thriller": 280,
     "Medical thriller": 260,
@@ -181,38 +161,17 @@ likes_libros = {
     "Love-inspired suspense": 180,
 }
 
-# EJECUTAR LAS 3 VERSIONES
-print("\n" + "="*80)
 print("EJECUTANDO LAS 3 VERSIONES DEL ALGORITMO")
-print("="*80)
 
 pr_v1 = version1_sin_pesos(G)
-pr_v2 = version2_personalizacion_likes(G, likes_libros, referencias)
 pr_v3 = version3_con_referencias_y_pesos(G, referencias, peso_libro=2.0, peso_referencia=3.0)
+pr_v4 = version4_personalizacion_likes(G, likes_libros, referencias)
 
 # MOSTRAR ÁRBOLES CON PESOS
 imprimir_arbol_con_pesos(G, pr_v1, "VERSIÓN 1: Sin Pesos (Baseline)")
-imprimir_arbol_con_pesos(G, pr_v2, "VERSIÓN 2: Personalización por Likes")
 imprimir_arbol_con_pesos(G, pr_v3, "VERSIÓN 3: Con Referencias y Pesos (refs=3x, libros=2x)")
+imprimir_arbol_con_pesos(G, pr_v4, "VERSIÓN 4: Personalización por Likes")
 
-# TABLA COMPARATIVA EXTENDIDA
-print(f"\n{'='*110}")
-print("TABLA COMPARATIVA COMPLETA - TODAS LAS VERSIONES")
-print(f"{'='*110}")
+tabla_comparativa_final(G, pr_v1, pr_v3, pr_v4)
 
-# Ordenar por V2 para ver el efecto de los likes
-nodos_ordenados = sorted(pr_v2.items(), key=lambda x: x[1], reverse=True)
-
-print(f"\n{'Nodo':<35} {'V1':<12} {'V2(Likes)':<12} {'V3':<12} {'ΔV2-V1':<10} {'ΔV3-V1':<10}")
-print("-"*110)
-
-for nodo, score_v2 in nodos_ordenados:
-    score_v1 = pr_v1[nodo]
-    score_v3 = pr_v3[nodo]
-    diff_v2 = score_v2 - score_v1
-    diff_v3 = score_v3 - score_v1
-    
-    print(f"{nodo:<35} {score_v1:<12.6f} {score_v2:<12.6f} {score_v3:<12.6f} {diff_v2:+<10.4f} {diff_v3:+<10.4f}")
-
-
-exportar_html(G, pr_v1, pr_v2, pr_v3, "resultado.html")
+exportar_html(G, pr_v1, pr_v3, pr_v4, "resultado.html")

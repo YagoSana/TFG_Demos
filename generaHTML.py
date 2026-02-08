@@ -126,8 +126,8 @@ def exportar_html(G, pr1, pr2, pr3, nombre_archivo="index.html"):
         
         <div class="grid-container">
             <div class="card"><h3>V1: Base</h3>{html_v1}</div>
-            <div class="card"><h3>V2: Pesos Hojas</h3>{html_v2}</div>
-            <div class="card"><h3>V3: Final (Refs)</h3>{html_v3}</div>
+            <div class="card"><h3>V3: Referencias</h3>{html_v2}</div>
+            <div class="card"><h3>V4: Likes (nuevo)</h3>{html_v3}</div>
         </div>
         
         <h2>Comparativa de Diferenciales</h2>
@@ -135,7 +135,7 @@ def exportar_html(G, pr1, pr2, pr3, nombre_archivo="index.html"):
             <table>
                 <thead>
                     <tr>
-                        <th>Nodo</th><th>V1</th><th>V2</th><th>Δ V2</th><th>V3</th><th>Δ V3</th>
+                        <th>Nodo</th><th>V1</th><th>V3</th><th>Δ V3</th><th>V4</th><th>Δ V4</th>
                     </tr>
                 </thead>
                 <tbody>{rows_html}</tbody>
