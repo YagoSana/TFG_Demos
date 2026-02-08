@@ -1,0 +1,786 @@
+{"isbn": "184737297X", 
+"text_reviews_count": "15", 
+"series": ["169353"], 
+"country_code": "US", 
+"language_code": "", 
+"popular_shelves": [
+	{"count": "159", "name": "to-read"}, 
+	{"count": "12", "name": "historical-fiction"}, 
+	{"count": "11", "name": "mystery"}, 
+	{"count": "10", "name": "historical-mystery"}, 
+	{"count": "7", "name": "medieval"}, 
+	{"count": "6", "name": "historical"}, 
+	{"count": "5", "name": "crime"}, 
+	{"count": "3", "name": "series"}, 
+	{"count": "3", "name": "ebook"}, 
+	{"count": "3", "name": "fiction"}, 
+	{"count": "3", "name": "crowner-john"}, 
+	{"count": "2", "name": "default"}, 
+	{"count": "2", "name": "books"}, 
+	{"count": "2", "name": "owned"}, 
+	{"count": "2", "name": "mystery-thrillers"}, 
+	{"count": "2", "name": "c"}, 
+	{"count": "2", "name": "library"}, 
+	{"count": "2", "name": "wish-list"}, 
+	{"count": "2", "name": "england"}, 
+	{"count": "2", "name": "medieval-england"}, 
+	{"count": "2", "name": "mystery-historical"}, 
+	{"count": "2", "name": "audiobook"}, 
+	{"count": "1", "name": "recs-not-interested"}, 
+	{"count": "1", "name": "available"}, 
+	{"count": "1", "name": "public-library"}, 
+	{"count": "1", "name": "boulder"}, 
+	{"count": "1", "name": "fiction-historical"}, 
+	{"count": "1", "name": "fiction-crime"}, 
+	{"count": "1", "name": "downloadable-audio"}, 
+	{"count": "1", "name": "detectives"}, 
+	{"count": "1", "name": "need-to-obtain"}, 
+	{"count": "1", "name": "read-2017"}, 
+	{"count": "1", "name": "r-f"}, 
+	{"count": "1", "name": "hist-myst"}, 
+	{"count": "1", "name": "currently-reading"}, 
+	{"count": "1", "name": "historic"}, 
+	{"count": "1", "name": "e-reader-suspense"}, 
+	{"count": "1", "name": "historical-murder-mystery"}, 
+	{"count": "1", "name": "historic-fiction"}, 
+	{"count": "1", "name": "crowner-john-mystery"}, 
+	{"count": "1", "name": "mideaval-mystery"}, 
+	{"count": "1", "name": "crime-historical"}, 
+	{"count": "1", "name": "on-my-shelf"}, 
+	{"count": "1", "name": "need-to-buy"}, 
+	{"count": "1", "name": "zenigma-crowner-john"}, 
+	{"count": "1", "name": "warehouse-sinc"}, 
+	{"count": "1", "name": "a-missing-piece"}, 
+	{"count": "1", "name": "library-audiobooks"}, 
+	{"count": "1", "name": "physical-currently-owned"}, 
+	{"count": "1", "name": "no-loan"}, 
+	{"count": "1", "name": "tbr-busting-2015"}, 
+	{"count": "1", "name": "spring-2015"}, 
+	{"count": "1", "name": "plantagenet-1154-1485"}, 
+	{"count": "1", "name": "medieval5c-16c"}, 
+	{"count": "1", "name": "forensics"}, 
+	{"count": "1", "name": "zscribd"}, 
+	{"count": "1", "name": "tbr-2014"}, 
+	{"count": "1", "name": "pub-simon-schuster"}, 
+	{"count": "1", "name": "pc-400-499"}, 
+	{"count": "1", "name": "e-book"}, 
+	{"count": "1", "name": "c-green"}, 
+	{"count": "1", "name": "author-k"}, 
+	{"count": "1", "name": "murder-mystery"}, 
+	{"count": "1", "name": "knight-b"}, 
+	{"count": "1", "name": "british"}, 
+	{"count": "1", "name": "tbr-busting-2014"}, 
+	{"count": "1", "name": "fraudio"}, 
+	{"count": "1", "name": "under-500-ratings"}, 
+	{"count": "1", "name": "winter-20142015"}, 
+	{"count": "1", "name": "published-2009"}, 
+	{"count": "1", "name": "historcal-mysteries"}, 
+	{"count": "1", "name": "in-library"}, 
+	{"count": "1", "name": "tbr"}, 
+	{"count": "1", "name": "one-click-dig"}, 
+	{"count": "1", "name": "dropped"}, 
+	{"count": "1", "name": "e-library"}, 
+	{"count": "1", "name": "library-book"}, 
+	{"count": "1", "name": "read-prior-to-2014"}, 
+	{"count": "1", "name": "historical-crime-fiction"}, 
+	{"count": "1", "name": "historical-who-dunnit"}, 
+	{"count": "1", "name": "lcpl-eaudio"}, 
+	{"count": "1", "name": "pinossa"}, 
+	{"count": "1", "name": "b-cher-2012"}, 
+	{"count": "1", "name": "purchasesaug2013"}, 
+	{"count": "1", "name": "histmyst"}, 
+	{"count": "1", "name": "books-i-own"}, 
+	{"count": "1", "name": "historical-novels"}, 
+	{"count": "1", "name": "should-read"}, 
+	{"count": "1", "name": "mystery-historical-all"}, 
+	{"count": "1", "name": "peter"}, 
+	{"count": "1", "name": "books-to-get-list"}, 
+	{"count": "1", "name": "knight-bernard"}, 
+	{"count": "1", "name": "mp3"}, 
+	{"count": "1", "name": "needed-mysteries"}, 
+	{"count": "1", "name": "historical-hoodunits"}, 
+	{"count": "1", "name": "detective-crowner-john"}, 
+	{"count": "1", "name": "books-in-english"}, 
+	{"count": "1", "name": "to"}, 
+	{"count": "1", "name": "need"}, 
+	{"count": "1", "name": "1100s-ad"}
+	], 
+"asin": "", 
+"is_ebook": "false", 
+"average_rating": "3.93", 
+"kindle_asin": "B007YLTG5I", 
+"similar_books": ["439108", "522621", "116770", "1275927", "6202655", "8409638", "386777", "11284834", "1041348"], 
+"description": "London, 1196. At the command of Richard the Lionheart, Sir John de Wolfe has left his beloved West Country for the Palace of Westminster, where he has been appointed Coroner of the Verge. But with the king overseas, embroiled in a costly war against King Philip of France, Sir John is dismayed to discover that the English court is a hotbed of greed, corruption and petty in-fighting.\nThe murder of one of the palace clerks, stabbed in broad daylight and thrown into the River Thames, leads John to suspect that there's a conspiracy underway to overthrow King Richard. And with the visit of the dowager Queen Eleanor fast approaching, the new Coroner must risk his life to prove his suspicions are right, root out the traitors within and prevent a national catastrophe.", "format": "Hardcover", "link": "https://www.goodreads.com/book/show/6066814-crowner-royal", 
+"authors": [{"author_id": "37778", "role": ""}], 
+"publisher": "Simon & Schuster UK", 
+"num_pages": "400", 
+"publication_day": "6", 
+"isbn13": "9781847372970", 
+"publication_month": "4", 
+"edition_information": "", 
+"publication_year": "2009", 
+"url": "https://www.goodreads.com/book/show/6066814-crowner-royal", 
+"image_url": "https://images.gr-assets.com/books/1328724803m/6066814.jpg", 
+"book_id": "6066814", 
+"ratings_count": "186", "work_id": "6243149", 
+"title": "Crowner Royal (Crowner John Mystery, #13)", 
+"title_without_series": "Crowner Royal (Crowner John Mystery, #13)"
+}
+
+
+{"isbn": "", 
+"text_reviews_count": "60", 
+"series": ["1052227"], 
+"country_code": "US", 
+"language_code": "eng",
+	"popular_shelves": [
+		{
+			"count": "54",
+			"name": "currently-reading"
+		},
+		{
+			"count": "8",
+			"name": "netgalley"
+		},
+		{
+			"count": "5",
+			"name": "kindle"
+		},
+		{
+			"count": "3",
+			"name": "read-2017"
+		},
+		{
+			"count": "3",
+			"name": "read-in-2017"
+		},
+		{
+			"count": "3",
+			"name": "paranormal"
+		},
+		{
+			"count": "2",
+			"name": "ghost"
+		},
+		{
+			"count": "2",
+			"name": "next-in-a-series"
+		},
+		{
+			"count": "2",
+			"name": "mystery-pi"
+		},
+		{
+			"count": "2",
+			"name": "ebook"
+		},
+		{
+			"count": "2",
+			"name": "paranormal-mystery"
+		},
+		{
+			"count": "2",
+			"name": "adult"
+		},
+		{
+			"count": "2",
+			"name": "fantasy"
+		},
+		{
+			"count": "2",
+			"name": "historical-fiction"
+		},
+		{
+			"count": "2",
+			"name": "giveaway"
+		},
+		{
+			"count": "2",
+			"name": "to-buy"
+		},
+		{
+			"count": "2",
+			"name": "first-reads"
+		},
+		{
+			"count": "2",
+			"name": "reviewed"
+		},
+		{
+			"count": "1",
+			"name": "mystery"
+		},
+		{
+			"count": "1",
+			"name": "four-star-books"
+		},
+		{
+			"count": "1",
+			"name": "adult-favorites"
+		},
+		{
+			"count": "1",
+			"name": "to-read-own"
+		},
+		{
+			"count": "1",
+			"name": "owned-but-unread"
+		},
+		{
+			"count": "1",
+			"name": "need-to-finish"
+		},
+		{
+			"count": "1",
+			"name": "kindle-books"
+		},
+		{
+			"count": "1",
+			"name": "challenge2017"
+		},
+		{
+			"count": "1",
+			"name": "kindle-unlimited"
+		},
+		{
+			"count": "1",
+			"name": "united-states"
+		},
+		{
+			"count": "1",
+			"name": "southern"
+		},
+		{
+			"count": "1",
+			"name": "historical-mystery-20th-c"
+		},
+		{
+			"count": "1",
+			"name": "audio"
+		},
+		{
+			"count": "1",
+			"name": "supernatural"
+		},
+		{
+			"count": "1",
+			"name": "murder-mystery"
+		},
+		{
+			"count": "1",
+			"name": "series"
+		},
+		{
+			"count": "1",
+			"name": "paranormal-fantasy"
+		},
+		{
+			"count": "1",
+			"name": "unlimited-books"
+		},
+		{
+			"count": "1",
+			"name": "finished"
+		},
+		{
+			"count": "1",
+			"name": "zz-alabama"
+		},
+		{
+			"count": "1",
+			"name": "mystery-paranormal"
+		},
+		{
+			"count": "1",
+			"name": "arcs-tbr"
+		},
+		{
+			"count": "1",
+			"name": "not-read"
+		},
+		{
+			"count": "1",
+			"name": "a-new"
+		},
+		{
+			"count": "1",
+			"name": "read-arc"
+		},
+		{
+			"count": "1",
+			"name": "rated"
+		},
+		{
+			"count": "1",
+			"name": "from-netgalley"
+		},
+		{
+			"count": "1",
+			"name": "giveaways"
+		},
+		{
+			"count": "1",
+			"name": "want-more"
+		},
+		{
+			"count": "1",
+			"name": "mystery-thriller"
+		},
+		{
+			"count": "1",
+			"name": "adult-fantasy"
+		},
+		{
+			"count": "1",
+			"name": "2017-reading-challenge"
+		},
+		{
+			"count": "1",
+			"name": "historical-mystery"
+		},
+		{
+			"count": "1",
+			"name": "southern-usa"
+		},
+		{
+			"count": "1",
+			"name": "paranormal-ghost"
+		},
+		{
+			"count": "1",
+			"name": "tbr-later"
+		},
+		{
+			"count": "1",
+			"name": "readingthing-2017"
+		},
+		{
+			"count": "1",
+			"name": "cloak-and-dagger-2017"
+		},
+		{
+			"count": "1",
+			"name": "20booksofsummer-2017"
+		},
+		{
+			"count": "1",
+			"name": "own-to-read"
+		},
+		{
+			"count": "1",
+			"name": "goodreads-giveaways"
+		},
+		{
+			"count": "1",
+			"name": "owned-kindle"
+		},
+		{
+			"count": "1",
+			"name": "kindle-book"
+		},
+		{
+			"count": "1",
+			"name": "first-reads-giveaways"
+		},
+		{
+			"count": "1",
+			"name": "want-to-listen"
+		},
+		{
+			"count": "1",
+			"name": "audible"
+		},
+		{
+			"count": "1",
+			"name": "loan"
+		},
+		{
+			"count": "1",
+			"name": "i-own-a-copy"
+		},
+		{
+			"count": "1",
+			"name": "goodreads-giveaway-winner"
+		},
+		{
+			"count": "1",
+			"name": "1-own"
+		},
+		{
+			"count": "1",
+			"name": "fiction"
+		},
+		{
+			"count": "1",
+			"name": "thomas-and-mercer"
+		},
+		{
+			"count": "1",
+			"name": "ng"
+		},
+		{
+			"count": "1",
+			"name": "mystery-thrillers-suspense"
+		},
+		{
+			"count": "1",
+			"name": "2017-07-july"
+		},
+		{
+			"count": "1",
+			"name": "e-books"
+		},
+		{
+			"count": "1",
+			"name": "review-copies"
+		},
+		{
+			"count": "1",
+			"name": "2017-books"
+		},
+		{
+			"count": "1",
+			"name": "cozy-mystery"
+		},
+		{
+			"count": "1",
+			"name": "w-s-w"
+		},
+		{
+			"count": "1",
+			"name": "will-read-all-by-this-author"
+		},
+		{
+			"count": "1",
+			"name": "southern-lit"
+		},
+		{
+			"count": "1",
+			"name": "author-to-follow"
+		},
+		{
+			"count": "1",
+			"name": "2017-challenge"
+		},
+		{
+			"count": "1",
+			"name": "2017-summer-want-to-read"
+		},
+		{
+			"count": "1",
+			"name": "net-galley-books"
+		},
+		{
+			"count": "1",
+			"name": "ebooks"
+		},
+		{
+			"count": "1",
+			"name": "series-to-start"
+		},
+		{
+			"count": "1",
+			"name": "help-me-decide-arc"
+		},
+		{
+			"count": "1",
+			"name": "book-shelf"
+		},
+		{
+			"count": "1",
+			"name": "owned-books"
+		},
+		{
+			"count": "1",
+			"name": "next-in-series-not-out"
+		},
+		{
+			"count": "1",
+			"name": "giveaways-entered"
+		},
+		{
+			"count": "1",
+			"name": "need"
+		},
+		{
+			"count": "1",
+			"name": "ghosts"
+		}
+	],
+	"asin": "B01NCIKAQX",
+	"is_ebook": "true",
+	"average_rating": "4.33",
+	"kindle_asin": "B01NCIKAQX",
+	"similar_books": [],
+	"description": "",
+	"format": "",
+	"link": "https://www.goodreads.com/book/show/33394837-the-house-of-memory",
+	"authors": [
+		{
+			"author_id": "242185",
+			"role": ""
+		}
+	],
+	"publisher": "",
+	"num_pages": "318",
+	"publication_day": "",
+	"isbn13": "",
+	"publication_month": "",
+	"edition_information": "",
+	"publication_year": "",
+	"url": "https://www.goodreads.com/book/show/33394837-the-house-of-memory",
+	"image_url": "https://images.gr-assets.com/books/1493114742m/33394837.jpg",
+	"book_id": "33394837",
+	"ratings_count": "269",
+	"work_id": "54143148",
+	"title": "The House of Memory (Pluto's Snitch #2)", 
+	"title_without_series": "The House of Memory (Pluto's Snitch #2)"}
+
+{
+	"isbn": "",
+	"text_reviews_count": "23",
+	"series": [ "953679" ],
+	"country_code": "US",
+	"language_code": "eng",
+	"popular_shelves": [
+		{
+			"count": "90",
+			"name": "to-read"
+		},
+		{
+			"count": "53",
+			"name": "currently-reading"
+		},
+		{
+			"count": "5",
+			"name": "humor"
+		},
+		{
+			"count": "3",
+			"name": "kindle"
+		},
+		{
+			"count": "2",
+			"name": "on-my-kindle"
+		},
+		{
+			"count": "2",
+			"name": "kindle-books"
+		},
+		{
+			"count": "2",
+			"name": "series"
+		},
+		{
+			"count": "2",
+			"name": "free-reads"
+		},
+		{
+			"count": "1",
+			"name": "series-first"
+		},
+		{
+			"count": "1",
+			"name": "labeled-2016"
+		},
+		{
+			"count": "1",
+			"name": "can-t-finish-it"
+		},
+		{
+			"count": "1",
+			"name": "kindle-free"
+		},
+		{
+			"count": "1",
+			"name": "owned-books"
+		},
+		{
+			"count": "1",
+			"name": "have-but-not-read"
+		},
+		{
+			"count": "1",
+			"name": "owned-not-read"
+		},
+		{
+			"count": "1",
+			"name": "1st-in-series"
+		},
+		{
+			"count": "1",
+			"name": "available-on-kindle"
+		},
+		{
+			"count": "1",
+			"name": "kindle-freebies"
+		},
+		{
+			"count": "1",
+			"name": "paranormal-mystery"
+		},
+		{
+			"count": "1",
+			"name": "owned"
+		},
+		{
+			"count": "1",
+			"name": "to-be-shelved"
+		},
+		{
+			"count": "1",
+			"name": "mystery-and-suspense"
+		},
+		{
+			"count": "1",
+			"name": "british-detective"
+		},
+		{
+			"count": "1",
+			"name": "sex"
+		},
+		{
+			"count": "1",
+			"name": "free-e-book"
+		},
+		{
+			"count": "1",
+			"name": "fiction-humorous"
+		},
+		{
+			"count": "1",
+			"name": "action"
+		},
+		{
+			"count": "1",
+			"name": "absurd-humor"
+		},
+		{
+			"count": "1",
+			"name": "amazon-books"
+		},
+		{
+			"count": "1",
+			"name": "tbr-kindle-digital-owned"
+		},
+		{
+			"count": "1",
+			"name": "tbc-on-fb"
+		},
+		{
+			"count": "1",
+			"name": "crime"
+		},
+		{
+			"count": "1",
+			"name": "reviewed-on-amazon-fr"
+		},
+		{
+			"count": "1",
+			"name": "partial"
+		},
+		{
+			"count": "1",
+			"name": "digital"
+		},
+		{
+			"count": "1",
+			"name": "amazon-ebooks"
+		},
+		{
+			"count": "1",
+			"name": "labeled"
+		},
+		{
+			"count": "1",
+			"name": "200-to-300"
+		},
+		{
+			"count": "1",
+			"name": "scribd"
+		},
+		{
+			"count": "1",
+			"name": "shelf-b-authors"
+		},
+		{
+			"count": "1",
+			"name": "a-pending-placement"
+		},
+		{
+			"count": "1",
+			"name": "to-read-mysteries"
+		},
+		{
+			"count": "1",
+			"name": "mystery"
+		},
+		{
+			"count": "1",
+			"name": "fiction"
+		},
+		{
+			"count": "1",
+			"name": "ebook"
+		},
+		{
+			"count": "1",
+			"name": "e-book"
+		},
+		{
+			"count": "1",
+			"name": "parody"
+		},
+		{
+			"count": "1",
+			"name": "historic"
+		},
+		{
+			"count": "1",
+			"name": "fun"
+		},
+		{
+			"count": "1",
+			"name": "owned-tbr"
+		},
+		{
+			"count": "1",
+			"name": "0-owned"
+		},
+		{
+			"count": "1",
+			"name": "ebooks-i-own"
+		}
+	],
+	"asin": "B01ALOWJN0",
+	"is_ebook": "true",
+	"average_rating": "3.49",
+	"kindle_asin": "B01ALOWJN0",
+	"similar_books": [],
+	"description": "BATHS, BANKS AND ROMAN INSURRECTION\nDetective Inspector Capstan investigates a murder at Bath's almost famous Basin Museum, a hapless armed robbery, the theft of ancient Roman weaponry and the answer to \"one across\" in the local newspaper. Meanwhile, the city is under threat of Roman invasion and their leader, Becky Philips, is taking no prisoners.",
+	"format": "",
+	"link": "https://www.goodreads.com/book/show/29074697-the-slaughtered-virgin-of-zenopolis",
+	"authors": [
+		{
+			"author_id": "15104629",
+			"role": ""
+		},
+		{
+			"author_id": "14425713",
+			"role": ""
+		}
+	],
+	"publisher": "Amazon Digital Services",
+	"num_pages": "",
+	"publication_day": "",
+	"isbn13": "",
+	"publication_month": "",
+	"edition_information": "",
+	"publication_year": "",
+	"url": "https://www.goodreads.com/book/show/29074697-the-slaughtered-virgin-of-zenopolis",
+	"image_url": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+	"book_id": "29074697",
+	"ratings_count": "192",
+	"work_id": "49305010",
+	"title": "The Slaughtered Virgin of Zenopolis (Inspector Capstan #1)", 
+	"title_without_series": "The Slaughtered Virgin of Zenopolis (Inspector Capstan #1)"}
