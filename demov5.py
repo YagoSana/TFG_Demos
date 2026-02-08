@@ -174,4 +174,4 @@ imprimir_arbol_con_pesos(G, pr_v4, "VERSIÓN 4: Personalización por Likes")
 
 tabla_comparativa_final(G, pr_v1, pr_v3, pr_v4)
 
-exportar_html(G, pr_v1, pr_v3, pr_v4, "resultado.html")
+exportar_html(G, pr_v1, pr_v3, pr_v4, "index.html")
