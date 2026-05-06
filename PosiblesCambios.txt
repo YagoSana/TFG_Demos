@@ -1,12 +1,3 @@
-ORGANIZACION EN CARPETAS
-
-Modificar la entrada para que sea mas compleja y se acepten datos como "libros"
-    - Simular un arbol jerárquico de juguete para luego aplicar dataset
-    - Hacer pequeña UI para visualizarlo mejor
-
-Versiones:
-    - Solo jerarquías sin pesos a libros
-    - Solo jerarquías con pesos a libros
-    - Con referencias con pesos a libros
-    - 
-
+Interfaz de usuario interactivo en el lado del cliente
+Mezclar las referencias con los "likes"
+Filtrar los géneros de los libros para el "dataset_limpio" 
