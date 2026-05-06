@@ -1,5 +1,6 @@
 # Demo para comprender el uso de networkX
 import networkx as nx
+import sys
 
 #funcion recursiva para imprimir el arbol de nodos
 def imprimir_arbol_recursivo(grafo, nodo_actual, pagerank_dict, prefijo="", es_ultimo=True):
@@ -30,25 +31,20 @@ def imprimir_arbol_recursivo(grafo, nodo_actual, pagerank_dict, prefijo="", es_u
         imprimir_arbol_recursivo(grafo, hijo, pagerank_dict, prefijo_siguiente, es_el_ultimo_hijo)
 
 #COMIENZO DEL PROGRAMA PRINCIPAL
-# Crear un grafo dirigido
+# Crear un grafo dirigido vacío
 G = nx.DiGraph()
 
 # NetworkX añade nodos automaticamente al crear aristas
-# Leer de un documento de texto de entrada, los nodos del grafo
-# Los 2 primeros valores son el num de nodos y aristas que ignoraremos, están en el fichero por similitud a otros formatos (domjudge)
+# Leer de un documento de texto de entrada, con los nodos del grafo. Los 2 primeros valores son el num de nodos y aristas, que ignoraremos.
 
 try:
     nombre_archivo = "entrada.txt"
     with open(nombre_archivo, 'r') as f:
-        #lee la primera linea que no es necesario en NetworkX para construir el grafo
-        primera_linea = f.readline()
-
+        primera_linea = f.readline()            # lee la primera linea que no es necesario en NetworkX para construir el grafo
         for linea in f:
             nueva_linea = linea.strip()
-
-            if nueva_linea: #si la linea tiene contenido
+            if nueva_linea:                     # si la linea tiene contenido, insertar los valores
                 valores = nueva_linea.split()
-                #insertar los valores como aristas invertidas para dar importancia "hacia arriba"
                 if len(valores) >= 2:
                     ini = int(valores[0])
                     fin = int(valores[1])
@@ -64,11 +60,8 @@ print(G.edges())
 
 # Aplicar algoritmo PageRank
 pagerank1 = nx.pagerank(G, alpha=0.85) #factor de amortiguamiento típico es 0.85
-# Calcular PageRank con parámetros de importancia a nodos iniciales
-# Nstart es un diccionario con valores iniciales para cada nodo
 
-# Identificar nodos "hoja" (donde empieza el flujo del grafo invertido)
-# Los nodos hoja son los que tienen grado 0 de entrada (nadie les apunta) <- REVISAR
+# Identificar nodos "hoja" (donde empieza el flujo del grafo invertido). Los nodos hoja son los que tienen grado 0 de entrada
 nodos_hoja = [n for n in G.nodes() if G.in_degree(n) == 0]
 
 # Asignar un peso inicial igual para todos los nodos hoja
@@ -76,7 +69,7 @@ diccionario_pesos = {nodo: 0 for nodo in G.nodes()} # Inicializar todos a 0
 for nodo in nodos_hoja:
     diccionario_pesos[nodo] = 100 # Valor alto inventado 
 
-# Probar con nstart y personalization para mostrar que nstart solo afecta la inicialización y que con muchas iteraciones (pagerank hace unas cuantas) se diluye el efecto
+# Probar con nstart y personalization para mostrar que nstart solo afecta la inicialización y que con muchas iteraciones se diluye el efecto
 pagerank2 = nx.pagerank(G, alpha=0.85, nstart=diccionario_pesos)
 pagerank3 = nx.pagerank(G, alpha=0.85, personalization=diccionario_pesos)
 print("PageRank de los nodos:")
